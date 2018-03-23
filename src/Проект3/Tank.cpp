@@ -57,9 +57,9 @@ void Tank::move (Field& field, DIRECTION d = DEFAULT)
 				 field.field[x_-1][y_] != NON_SOLID_WALL && field.field[x_-1][y_] != ENEMY &&
 				 field.field[x_-1][y_] != SOLID_WALL && field.field[x_-1][y_] != AURUM) 
 			{
-				 field.field[x_][y_] = ' ';
+				 field.field[x_][y_] = EMPTY;
 				  x_--;
-					if(isMy_)
+					if (isMy_)
 						field.field[x_][y_] = MY_TANK;
 					else
 				  field.field[x_][y_] = ENEMY;
@@ -70,9 +70,9 @@ void Tank::move (Field& field, DIRECTION d = DEFAULT)
 				 field.field[x_+1][y_] != NON_SOLID_WALL && field.field[x_+1][y_] != ENEMY &&
 				 field.field[x_+1][y_] != SOLID_WALL && field.field[x_+1][y_] != AURUM) 
 			{
-				 field.field[x_][y_] = ' ';
+				 field.field[x_][y_] = EMPTY;
 				 x_++;
-				 if(isMy_)
+				 if (isMy_)
 					 field.field[x_][y_] = MY_TANK;
 				 else
 				   field.field[x_][y_] = ENEMY;
@@ -83,9 +83,9 @@ void Tank::move (Field& field, DIRECTION d = DEFAULT)
 				 field.field[x_][y_-1] != NON_SOLID_WALL && field.field[x_][y_-1] != ENEMY &&
 				 field.field[x_][y_-1] != SOLID_WALL && field.field[x_][y_-1] != AURUM) 
 			{
-				 field.field[x_][y_] = ' ';
+				 field.field[x_][y_] = EMPTY;
 				 y_--;
-				 if(isMy_)
+				 if (isMy_)
 					 field.field[x_][y_] = MY_TANK;
 				 else
 				   field.field[x_][y_] = ENEMY;
@@ -96,9 +96,9 @@ void Tank::move (Field& field, DIRECTION d = DEFAULT)
 				 field.field[x_][y_+1] != NON_SOLID_WALL && field.field[x_][y_+1] != ENEMY &&
 				 field.field[x_][y_+1] != SOLID_WALL && field.field[x_][y_+1] != AURUM)
 			{
-				 field.field[x_][y_] = ' ';
+				 field.field[x_][y_] = EMPTY;
 				 y_++;
-				 if(isMy_)
+				 if (isMy_)
 					 field.field[x_][y_] = MY_TANK;
 				 else
 				   field.field[x_][y_] = ENEMY;
@@ -130,8 +130,7 @@ inline int Tank::getX() const
 
 
 
-int
-inline Tank::getY() const
+inline int Tank::getY() const
 {
 	return y_;
 }

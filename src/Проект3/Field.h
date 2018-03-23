@@ -19,7 +19,8 @@ const int MY_START_POSITION_Y = 23;
 const int GOLD_POSITION_X = 12;
 const int GOLD_POSITION_Y = 25;
 
-class Field{
+class Field
+{
 public:
 	char field [HEIGHT][WIDTH];
 

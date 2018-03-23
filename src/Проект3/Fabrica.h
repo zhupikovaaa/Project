@@ -3,7 +3,8 @@
 
 #include "iGameObject.h"
 
-class Fabrica{
+class Fabrica
+{
 public:
 	iGameObject* createGameObject(Field& field);
 	iGameObject* createGameObject(Field& field, int x, int y);

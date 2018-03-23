@@ -3,7 +3,8 @@
 
 #include "iGameObject.h"
 
-class Bullet: public iGameObject{
+class Bullet: public iGameObject
+{
 public:
 	Bullet(int x, int y, DIRECTION d, bool isMy);
 	virtual void move(Field& field, DIRECTION d);

@@ -35,12 +35,12 @@ int main()
 	int myPreviousMoveX = MY_START_POSITION_X;
 	int myPreviousMoveY = MY_START_POSITION_Y;
 
-	while(true)
+	while (true)
 	{
-		if(_kbhit())
+		if (_kbhit())
 		{
 			move = _getch();
-				if(move == 224)
+				if (move == DEFAULT)
 					move = _getch();
 				switch (move) 
 				{
@@ -66,13 +66,13 @@ int main()
 					break;
 				case SHOOT:
 					nObjects++;
-					if(myPreviousMoveX > myTank->getX())
+					if (myPreviousMoveX > myTank->getX())
 						objects.emplace_back(bullet.createGameObject(myTank->getX(), myTank->getY(), UP, true));
-					else if(myPreviousMoveX < myTank->getX())
+					else if (myPreviousMoveX < myTank->getX())
 						objects.emplace_back(bullet.createGameObject(myTank->getX(), myTank->getY(), DOWN, true));
-					else if(myPreviousMoveY > myTank->getY())
+					else if (myPreviousMoveY > myTank->getY())
 						objects.emplace_back(bullet.createGameObject(myTank->getX(), myTank->getY(), RIGHT, true));
-					else if(myPreviousMoveY < myTank->getY())
+					else if (myPreviousMoveY < myTank->getY())
 						objects.emplace_back(bullet.createGameObject(myTank->getX(), myTank->getY(), LEFT, true));
 					else
 						objects.emplace_back(bullet.createGameObject(myTank->getX(), myTank->getY(), UP, true));
@@ -80,13 +80,13 @@ int main()
 				}
 		}
 
-		for(iterator = objects.begin(); iterator < objects.begin() + nObjects; )
+		for (iterator = objects.begin(); iterator < objects.begin() + nObjects; )
 		{
 			if ((*iterator)->isAlive())
 			{
 				(*iterator)->move(field);
-				if (((*iterator)->getX() == myTank->getX() || (*iterator)->getX() == GOLD_POSITION_X) &&
-					std::dynamic_pointer_cast<Tank>(*iterator))
+				if ( ( (*iterator)->getX() == myTank->getX() || (*iterator)->getX() == GOLD_POSITION_X ) &&
+					std::dynamic_pointer_cast<Tank>(*iterator) && !(rand() % 3))
 				{
 					auto ptr = iterator;
 
@@ -98,8 +98,8 @@ int main()
 					nObjects++;
 					iterator = ptr;
 				}
-				else if (((*iterator)->getY() == myTank->getY() || (*iterator)->getY() == GOLD_POSITION_Y) &&
-					std::dynamic_pointer_cast<Tank>(*iterator))
+				else if ( ( (*iterator)->getY() == myTank->getY() || (*iterator)->getY() == GOLD_POSITION_Y) &&
+					std::dynamic_pointer_cast<Tank>(*iterator)  && !(rand() % 3))
 				{
 					auto ptr = iterator;
 
@@ -116,7 +116,7 @@ int main()
 			else 
 			{
 				if (std::dynamic_pointer_cast<Bullet>(*iterator))
-					for(iterator2 = objects.begin(); iterator2 != objects.end(); ++iterator2)
+					for (iterator2 = objects.begin(); iterator2 != objects.end(); ++iterator2)
 						if ((*iterator)->getX() == (*iterator2)->getX() && (*iterator)->getY() == (*iterator2)->getY() &&
 							iterator != iterator2)
 						{

@@ -26,7 +26,7 @@ void Bullet::move (Field& field, DIRECTION d = DEFAULT){
 		break;
 	}
 
-	if(field.field[x_][y_] == MY_TANK)
+	if (field.field[x_][y_] == MY_TANK)
 	{
 		if (!isMy_)
 		{
@@ -86,7 +86,8 @@ inline bool Bullet::isAlive() const
 
 
 
-void Bullet::setDead(){
+void Bullet::setDead()
+{
 	life_ = false;
 }
 

@@ -4,7 +4,7 @@
 #include "Field.h"
 
 
-const enum DIRECTION {UP = 72, DOWN = 80, RIGHT = 75, LEFT = 77, SHOOT = 32, DEFAULT};
+const enum DIRECTION {UP = 72, DOWN = 80, RIGHT = 75, LEFT = 77, SHOOT = 32, DEFAULT = 224};
 
 class iGameObject
 {

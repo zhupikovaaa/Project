@@ -1,17 +1,25 @@
-﻿Построение начато 22.03.2018 21:16:07.
+﻿Построение начато 23.03.2018 10:49:04.
      1>Проект "F:\Новая папка (2)\cpp\Проект3\Проект3\Проект3.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Tank.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp Fabrica.cpp Field.cpp Tank.cpp main.cpp
+         main.cpp
+     1>f:\новая папка (2)\cpp\проект3\проект3\main.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
          Tank.cpp
+         Bullet.cpp
+         Создание кода...
+         Компиляция...
+         Field.cpp
+         Fabrica.cpp
+         Создание кода...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Новая папка (2)\cpp\Проект3\Debug\Проект3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Новая папка (2)\cpp\Проект3\Debug\Проект3.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Новая папка (2)\cpp\Проект3\Debug\Проект3.lib" /MACHINE:X86 Debug\Bullet.obj
          Debug\Fabrica.obj
          Debug\Field.obj
-         "Debug\Исходный код.obj"
+         Debug\main.obj
          Debug\Tank.obj
          Проект3.vcxproj -> F:\Новая папка (2)\cpp\Проект3\Debug\Проект3.exe
      1>Построение проекта "F:\Новая папка (2)\cpp\Проект3\Проект3\Проект3.vcxproj" завершено (целевые объекты Build).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:01.65
+Затраченное время: 00:00:04.24
