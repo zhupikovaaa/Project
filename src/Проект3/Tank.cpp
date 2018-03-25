@@ -29,9 +29,7 @@ Tank::Tank (Field& field): isMy_(false), life_(true)
 
 
 Tank::Tank (Field& field, int x, int y): x_(x), y_(y), isMy_(true), life_(true)
-{
-		field.field[x_][y_] = MY_TANK;
-}
+{}
 
 
 

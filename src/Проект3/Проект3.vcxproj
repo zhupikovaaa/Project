@@ -65,12 +65,14 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Fabrica.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tank.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="iGameObject.h" />
     <ClInclude Include="Tank.h" />
     <ClInclude Include="Fabrica.h" />
